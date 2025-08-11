@@ -1,0 +1,24 @@
+# Dependências do Node.js
+node_modules/
+
+# Arquivos de log do npm
+npm-debug.log
+yarn-debug.log*
+yarn-error.log*
+
+# Diretórios de cache do npm
+.npm/
+
+# Arquivos de cobertura de testes (geralmente gerados pelo Jest)
+coverage/
+
+# Outras pastas e arquivos temporários do sistema
+.DS_Store
+*.swp
+*.bak
+
+# Arquivos do VSCode
+.vscode/
+
+# Arquivos específicos do ambiente de desenvolvimento
+.env
