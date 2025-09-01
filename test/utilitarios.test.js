@@ -45,7 +45,6 @@ describe('Utilitarios', () => {
     });
   });
 
-  // Testes para as operações matemáticas
   describe('Operações Matemáticas', () => {
     it('somar: deve somar dois números', () => {
       expect(utilitarios.somar(5, 3)).toBe(8);
@@ -64,12 +63,10 @@ describe('Utilitarios', () => {
     });
 
     it('dividir: deve lançar um erro ao dividir por zero', () => {
-
       expect(() => utilitarios.dividir(10, 0)).toThrow('Divisão por zero');
     });
   });
 
-  // Testes para o método ehPar
   describe('ehPar', () => {
     it('deve retornar true para um número par', () => {
       expect(utilitarios.ehPar(4)).toBeTruthy();
@@ -80,7 +77,6 @@ describe('Utilitarios', () => {
     });
   });
 
-  // Testes para manipulação de arrays
   describe('Manipulação de Arrays', () => {
     const arrayOriginal = [1, 5, 2, 4, 3];
     const arrayStrings = ['c', 'a', 'b'];
@@ -98,16 +94,13 @@ describe('Utilitarios', () => {
     });
 
     it('ordenarArray: deve retornar um novo array ordenado', () => {
-
       expect(utilitarios.ordenarArray(arrayOriginal)).toEqual([1, 2, 3, 4, 5]);
       expect(utilitarios.ordenarArray(arrayStrings)).toEqual(['a', 'b', 'c']);
-      // Garante que o array original não foi modificado
       expect(arrayOriginal).toEqual([1, 5, 2, 4, 3]);
     });
 
     it('inverterArray: deve retornar um novo array invertido', () => {
       expect(utilitarios.inverterArray([1, 2, 3])).toEqual([3, 2, 1]);
-      // Garante que o array original não foi modificado
       const original = [1, 2, 3];
       utilitarios.inverterArray(original);
       expect(original).toEqual([1, 2, 3]);
@@ -130,7 +123,6 @@ describe('Utilitarios', () => {
     });
   });
 
-  // Testes para métodos utilitários gerais
   describe('Utilitários Gerais', () => {
     it('gerarNumeroAleatorio: deve gerar um número dentro do intervalo esperado', () => {
       const numero = utilitarios.gerarNumeroAleatorio(50);
@@ -163,7 +155,6 @@ describe('Utilitarios', () => {
     });
   });
 
-  // Testes para manipulação de objetos
   describe('Manipulação de Objetos', () => {
     it('mesclarObjetos: deve mesclar dois objetos, com o segundo sobrescrevendo o primeiro', () => {
       const obj1 = { a: 1, b: 2 };
